@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@300;700&family=Hanken+Grotesk:wght@500;700;800&family=Montserrat:wght@500;700&family=Outfit&display=swap');
+
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --paragraph-font-size: 14px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--Cream);
+}
+
+main {
+    background-color: var(--White);
+    display: grid;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1.5em;
+    overflow: hidden;
+}
+
+.discription {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    padding: 3.5em;
+}
+
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fraunces {
+    font-family: 'Fraunces', serif;
+}
+
+.dark-grayish-blue {
+    color: var(--Dark-grayish-blue);
+}
+
+.discription>span {
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 1.7em;
+}
+
+
+
+.discription>p {
+    font-size: 1.5em;
+    width: 80%;
+    line-height: 1.6em;
+}
+
+.discription div .new {
+    color: var(--Dark-cyan);
+    font-size: 3.5em;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.discription div .old {
+    display: inline-block;
+    padding-left: 2em;
+    transform: translatey(-0.3em);
+    font-size: 1.5em;
+}
+
+.discription>button {
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    height: 6em;
+    border-radius: 1em;
+}
+
+.icon {
+    display: inline-block;
+    transform: scale(2);
+    padding-right: 1em;
+}
+
+button>p {
+    display: inline-block;
+    font-size: 2em;
+}
+
+@media (min-width : 1200px) {
+    main {
+        width: 1200px;
+        height: 900px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .product {
+        background-image: url(image-product-desktop.jpg);
+    }
+    .discription>h1 {
+        color: var(--Very-dark-blue);
+        font-size: 3.7em;
+        width: 80%;
+    }
+}
+
+@media (max-width : 1201px) {
+    main {
+    width: 600px;
+    height: 1150px ;
+    grid-template-rows: 5fr 7fr;
+    }
+    .product {
+        background-image: url(image-product-mobile.jpg);
+    }
+    .discription>h1 {
+        color: var(--Very-dark-blue);
+        font-size: 3em;
+        width: 90%;
+    }
+    .discription>p {
+        width : 90% ;
+        font-size: 1.3em;
+    }
+
+}
